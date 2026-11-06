@@ -1,5 +1,94 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap');
-@tailwind base;@tailwind components;@tailwind utilities;
-:root{color-scheme:dark}html{scroll-behavior:smooth}body{@apply bg-night text-white font-sans antialiased}::selection{background:#67e8f955}
-@layer components{.container-wrap{@apply max-w-7xl mx-auto px-6 sm:px-9 lg:px-12}.page-pad{@apply pt-20 md:pt-28 pb-14}.eyebrow{@apply font-mono text-xs tracking-[.18em] uppercase text-cyan mb-4}.heading{@apply text-4xl sm:text-5xl font-bold tracking-tight leading-tight}.body-copy{@apply text-muted leading-relaxed}.nav-link{@apply text-sm font-medium hover:text-cyan transition-colors}.btn-primary{@apply inline-flex items-center gap-2 bg-cyan text-night font-bold px-6 py-3.5 rounded-lg hover:bg-white transition-colors}.btn-secondary{@apply inline-flex items-center gap-2 border border-white/20 px-6 py-3.5 rounded-lg font-semibold hover:border-cyan hover:text-cyan transition-colors}.glass-card{@apply rounded-2xl border border-white/10 bg-panel/80 p-7}.project-card{@apply relative rounded-2xl border border-white/10 bg-panel/70 p-7 sm:p-8 hover:border-cyan/40 transition-colors}.tag{@apply inline-block rounded-md border border-white/10 bg-white/5 text-xs text-muted px-2.5 py-1.5 font-mono}.cta{@apply rounded-3xl border border-cyan/20 bg-gradient-to-br from-[#122b3b] to-panel p-9 sm:p-14}.portrait-box{@apply min-h-[320px] border border-white/10 bg-gradient-to-br from-[#173348] to-panel rounded-2xl flex flex-col items-center justify-center}.gradient-text{@apply bg-gradient-to-r from-cyan via-[#a7f3d0] to-[#8ca9ff] bg-clip-text text-transparent}}
-.hero-glow{position:absolute;right:0;top:0;width:65%;height:90%;background:radial-gradient(ellipse at 70% 35%,#0d7f9d24,transparent 60%);pointer-events:none}.stretched-link:after{content:"";position:absolute;inset:0}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    color-scheme: dark
+}
+
+html {
+    scroll-behavior: smooth
+}
+
+body {
+    @apply bg-night text-white font-sans antialiased
+}
+
+::selection {
+    background: #67e8f955
+}
+
+@layer components {
+    .container-wrap {
+        @apply max-w-7xl mx-auto px-6 sm:px-9 lg:px-12
+    }
+
+    .page-pad {
+        @apply pt-20 md:pt-28 pb-14
+    }
+
+    .eyebrow {
+        @apply font-mono text-xs tracking-[.18em] uppercase text-cyan mb-4
+    }
+
+    .heading {
+        @apply text-4xl sm:text-5xl font-bold tracking-tight leading-tight
+    }
+
+    .body-copy {
+        @apply text-muted leading-relaxed
+    }
+
+    .nav-link {
+        @apply text-sm font-medium hover:text-cyan transition-colors
+    }
+
+    .btn-primary {
+        @apply inline-flex items-center gap-2 bg-cyan text-night font-bold px-6 py-3.5 rounded-lg hover:bg-white transition-colors
+    }
+
+    .btn-secondary {
+        @apply inline-flex items-center gap-2 border border-white/20 px-6 py-3.5 rounded-lg font-semibold hover:border-cyan hover:text-cyan transition-colors
+    }
+
+    .glass-card {
+        @apply rounded-2xl border border-white/10 bg-panel/80 p-7
+    }
+
+    .project-card {
+        @apply relative rounded-2xl border border-white/10 bg-panel/70 p-7 sm:p-8 hover:border-cyan/40 transition-colors
+    }
+
+    .tag {
+        @apply inline-block rounded-md border border-white/10 bg-white/5 text-xs text-muted px-2.5 py-1.5 font-mono
+    }
+
+    .cta {
+        @apply rounded-3xl border border-cyan/20 bg-gradient-to-br from-[#122b3b] to-panel p-9 sm:p-14
+    }
+
+    .portrait-box {
+        @apply min-h-[320px] border border-white/10 bg-gradient-to-br from-[#173348] to-panel rounded-2xl flex flex-col items-center justify-center
+    }
+
+    .gradient-text {
+        @apply bg-gradient-to-r from-cyan via-[#a7f3d0] to-[#8ca9ff] bg-clip-text text-transparent
+    }
+}
+
+.hero-glow {
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 65%;
+    height: 90%;
+    background: radial-gradient(ellipse at 70% 35%, #0d7f9d24, transparent 60%);
+    pointer-events: none
+}
+
+.stretched-link:after {
+    content: "";
+    position: absolute;
+    inset: 0
+}
