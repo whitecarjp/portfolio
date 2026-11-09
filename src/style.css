@@ -140,3 +140,13 @@ button:focus-visible {
 @media (min-width: 640px) {
   .project-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
+.project-videos { display: grid; gap: 1.25rem; margin-top: 3rem; }
+.project-video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #000;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(240, 193, 77, 0.8);
+  object-fit: contain;
+}
