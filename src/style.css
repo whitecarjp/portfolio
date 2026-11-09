@@ -116,3 +116,27 @@ button:focus-visible {
 }
 
 .stretched-link:after { content: ""; position: absolute; inset: 0; }
+
+.project-cover {
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  margin-bottom: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(240, 193, 77, 0.8);
+}
+.project-gallery {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+  margin-top: 3rem;
+}
+.project-gallery img {
+  width: 100%;
+  height: auto;
+  border-radius: 1rem;
+  border: 1px solid rgba(240, 193, 77, 0.8);
+}
+@media (min-width: 640px) {
+  .project-gallery { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
