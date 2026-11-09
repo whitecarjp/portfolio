@@ -16,5 +16,19 @@ export const projects = [
   { id: 'cctv-deployment', type: 'FIELD ENGINEERING', title: 'CCTV & physical infrastructure', description: 'Camera installation, continuous-recording configuration, detection checks, and field cabling.', stack: ['CCTV', 'Installation', 'Testing'], detail: 'Installed and validated camera systems, including recording, detection and audio functionality, with attention to clean cabling and practical maintenance.' },
   { id: 'fes-research', type: 'RESEARCH', title: 'Functional electrical stimulation assistive device', description: 'Computer Engineering research exploring a finger-flexion assistive device using functional electrical stimulation.', stack: ['Embedded Systems', 'Assistive Tech', 'Research'], detail: 'Academic research into system design and implementation of a functional electrical stimulation-based finger flexion assistive device. Presented in an engineering research setting; do not interpret this prototype as a clinically validated medical device.' },
   { id: 'support-automation', type: 'IT OPERATIONS', title: 'Service desk & knowledge management', description: 'Ticket triage, SLA-focused support, and repeatable knowledge-base guides for common user issues.', stack: ['Freshdesk', 'Documentation', 'Microsoft 365'], detail: 'Supported multi-client ticket queues with approximately 90% SLA performance and documented recurring issues such as Adobe access, VPN connection, and account provisioning.' },
-  { id: 'cloud-admin', type: 'SYSTEMS', title: 'Microsoft 365 & identity administration', description: 'User lifecycle administration, licensing, MFA, mailbox support, and identity troubleshooting.', stack: ['Microsoft 365', 'Entra ID', 'Active Directory'], detail: 'Handled day-to-day user provisioning, account recovery, licensing, MFA troubleshooting, and Microsoft 365 application support in professional IT environments.' }
+  { id: 'cloud-admin', type: 'SYSTEMS', title: 'Microsoft 365 & identity administration', description: 'User lifecycle administration, licensing, MFA, mailbox support, and identity troubleshooting.', stack: ['Microsoft 365', 'Entra ID', 'Active Directory'], detail: 'Handled day-to-day user provisioning, account recovery, licensing, MFA troubleshooting, and Microsoft 365 application support in professional IT environments.' },
+  {
+    id: 'bellavous-cctv',
+    type: 'FIELD ENGINEERING',
+    title: 'Bellavous CCTV Installation',
+    description: 'Planned and installed a 4-camera Dahua CCTV system for a commercial salon in Cebu, including cabling, a 12V 8A fused power distribution box, front-desk monitoring, and remote viewing.',
+    stack: ['CCTV', 'Dahua', 'Power Distribution', 'Cabling', 'Remote Access'],
+    detail: 'Planned and installed a 4-camera Dahua CCTV system for a commercial salon in Cebu. Mounted indoor and outdoor bullet cameras, and ran and managed the cable lines. Wired a 12V 8A fused power distribution box that feeds each camera on its own channel. Set up the recorder with a live multi-channel monitoring view at the front desk, and configured remote and mobile viewing.',
+    images: [
+      { src: '/projects/bellavous/monitor.webp', alt: 'Front-desk monitor showing the live multi-channel Dahua camera view for the Bellavous salon.' },
+      { src: '/projects/bellavous/ladder-mount.webp', alt: 'Jp on a ladder mounting an outdoor bullet camera at the salon.' },
+      { src: '/projects/bellavous/power-box-open.webp', alt: 'Opened 12V power distribution box with green channel LEDs lit, next to the AC/DC adapter.' },
+      { src: '/projects/bellavous/power-box-mounted.webp', alt: 'Finished wall-mounted power distribution box with coiled cable runs below it.' }
+    ]
+  }
 ];
