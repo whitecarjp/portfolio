@@ -66,9 +66,9 @@ export const projects = [
     id: 'ivr-echo-fix',
     type: 'IT OPERATIONS',
     title: 'IVR Configuration & IP Phone Echo Fix',
-    description: 'Configured the office phone system\'s IVR call responses and fixed an echo problem on the Yealink IP phones, tuning the T30P Voice settings and working across the Cisco and D-Link voice network and the desk drops.',
-    stack: ['VoIP', 'IVR', 'Yealink', 'SIP', 'Cisco', 'Troubleshooting'],
-    detail: 'Configured the IVR call responses for the office phone system and fixed an echo problem on the Yealink IP phones. Troubleshot through the Yealink T30P web interface\'s Voice settings, which cover echo cancellation, VAD, comfort noise, the adaptive jitter buffer, and noise suppression and smart noise block, and tuned those settings to clear up the echo. Worked across the voice network as well: the rack with Cisco 1800 series routers, a Cisco Catalyst 2960 Plus switch, and a D-Link switch, plus the desk drops feeding the phones.',
+    description: 'Converted the voice prompt files to the format the phone system requires, configured the IVR, built the call flow, and ran end-user testing. Fixed an echo problem on the Yealink IP phones, tuning the T30P Voice settings and working across the Cisco and D-Link voice network and the desk drops.',
+    stack: ['VoIP', 'IVR', 'Call Flow', 'UAT', 'Yealink', 'SIP', 'Cisco', 'Troubleshooting'],
+    detail: 'Converted the voice prompt files to the format the phone system requires, configured the IVR, built the call flow, and ran end-user testing. Fixed an echo problem on the Yealink IP phones. Troubleshot through the Yealink T30P web interface\'s Voice settings, which cover echo cancellation, VAD, comfort noise, the adaptive jitter buffer, and noise suppression and smart noise block, and tuned those settings to clear up the echo. Worked across the voice network as well: the rack with Cisco 1800 series routers, a Cisco Catalyst 2960 Plus switch, and a D-Link switch, plus the desk drops feeding the phones.',
     images: [
       { src: '/projects/voip/rack.webp', alt: 'Open wall rack with a patch panel, a D-Link switch, a Cisco Catalyst 2960 Plus, and two Cisco 1800 series routers.' },
       { src: '/projects/voip/voice-settings.webp', alt: 'Yealink T30P Voice settings page, covering echo cancellation, VAD, comfort noise, the jitter buffer, and noise suppression.' },
