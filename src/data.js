@@ -90,5 +90,17 @@ export const projects = [
       { src: '/projects/ap/tapo-feed.webp', alt: 'Tapo C110 live view of the main entrance (people blurred).' },
       { src: '/projects/ap/tapo-mount.webp', alt: 'Tapo C110 mounted above the entrance.' }
     ]
+  },
+  {
+    id: 'cyber-labs',
+    type: 'SECURITY',
+    title: 'Cybersecurity Labs (Cisco Junior Cybersecurity Analyst)',
+    description: 'Completed the module\'s guided Packet Tracer and lab activities, including Investigate a Threat Landscape, Packet Tracer File and Data Integrity Checks, and Explore Social Engineering Techniques, and observed packet traffic in Wireshark.',
+    stack: ['Cybersecurity', 'Cisco Packet Tracer', 'Threat Analysis', 'Data Integrity', 'Social Engineering', 'Wireshark'],
+    detail: 'Completed the Cisco Junior Cybersecurity Analyst module\'s labs. These were guided Packet Tracer and lab activities: Investigate a Threat Landscape, Packet Tracer File and Data Integrity Checks, and Explore Social Engineering Techniques. Also observed packet traffic in Wireshark.',
+    images: [
+      { src: '/projects/cyber-labs/threat-landscape.webp', alt: 'Packet Tracer scenario for Investigate a Threat Landscape (ISP, data center, branch, cafe, home).' },
+      { src: '/projects/cyber-labs/file-integrity.webp', alt: 'Packet Tracer scenario for File and Data Integrity Checks (HQ to branch via ISP).' }
+    ]
   }
 ];
