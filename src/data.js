@@ -45,5 +45,21 @@ export const projects = [
       { src: '/projects/starlink/aerial-roof.webp', alt: 'Aerial view of the Starlink dish on the rooftop beside the waterfront.' },
       { src: '/projects/starlink/obstruction-check.webp', alt: 'Starlink obstruction check showing a clear view and a good experience for streaming, browsing, video calls, and gaming.' }
     ]
+  },
+  {
+    id: 'office-cable-restructuring',
+    type: 'INFRASTRUCTURE',
+    title: 'Office Network Cable Restructuring',
+    description: 'Restructured the office structured cabling: rack work across the patch panels, a TP-Link switch, the ISP router, an ASUS router, and a Clavister firewall, with desk-drop testing and under-desk tray cleanup.',
+    stack: ['Structured Cabling', 'Cat6/RJ45', 'Cable Testing', 'Patch Panel', 'Troubleshooting'],
+    detail: 'Restructured the office\'s structured cabling. Worked in the network rack, which holds the patch panels, a TP-Link switch, the ISP router, an ASUS router, and a Clavister firewall. Traced and tested each desk drop with a NOYAFA NF-8508 cable tester. Continuity and wiremap tests found open cables, shorts, and miswired or split pairs on several runs. Worked through the under-desk cable trays to clean up and reroute the runs.',
+    images: [
+      { src: '/projects/cabling/rack.webp', alt: 'Network rack behind its glass door, with patch panels, a TP-Link switch, the ISP router, an ASUS router, and a Clavister firewall.' },
+      { src: '/projects/cabling/cable-tray.webp', alt: 'Under-desk cable tray with the runs being cleaned up and rerouted.' },
+      { src: '/projects/cabling/tester-open.webp', alt: 'NOYAFA NF-8508 cable tester showing an open cable.' },
+      { src: '/projects/cabling/tester-short.webp', alt: 'NOYAFA NF-8508 cable tester showing a short.' },
+      { src: '/projects/cabling/tester-crossed.webp', alt: 'NOYAFA NF-8508 wiremap showing a crossed pair.' },
+      { src: '/projects/cabling/tester-miswire.webp', alt: 'NOYAFA NF-8508 wiremap showing a miswired cable.' }
+    ]
   }
 ];
