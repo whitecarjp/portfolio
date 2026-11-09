@@ -86,7 +86,9 @@ export const projects = [
     images: [
       { src: '/projects/ap/network-corner.webp', alt: 'Network corner with the access point on the ceiling, routers on the shelf, and the wall rack below.' },
       { src: '/projects/ap/ap-ceiling.webp', alt: 'TP-Link EAP225-Outdoor access point mounted on the office ceiling.' },
-      { src: '/projects/ap/boxes.webp', alt: 'TP-Link EAP225-Outdoor and Tapo C110 boxes.' }
+      { src: '/projects/ap/boxes.webp', alt: 'TP-Link EAP225-Outdoor and Tapo C110 boxes.' },
+      { src: '/projects/ap/tapo-feed.webp', alt: 'Tapo C110 live view of the main entrance (people blurred).' },
+      { src: '/projects/ap/tapo-mount.webp', alt: 'Tapo C110 mounted above the entrance.' }
     ]
   }
 ];
