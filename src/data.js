@@ -30,5 +30,20 @@ export const projects = [
       { src: '/projects/bellavous/power-box-open.webp', alt: 'Opened 12V power distribution box with green channel LEDs lit, next to the AC/DC adapter.' },
       { src: '/projects/bellavous/power-box-mounted.webp', alt: 'Finished wall-mounted power distribution box with coiled cable runs below it.' }
     ]
+  },
+  {
+    id: 'starlink-failover',
+    type: 'SECURITY / NETWORKS',
+    title: 'Starlink Failover Installation',
+    description: 'Installed a Starlink dish as a failover internet link for a waterfront port-side site and integrated it with the site\'s Clavister firewall, so the failover link tunnels back to the Manila site.',
+    stack: ['Starlink', 'Clavister', 'Firewall', 'WAN Failover', 'VPN Tunnel', 'Networking'],
+    detail: 'Installed a Starlink dish as a failover internet link for a waterfront port-side site and integrated it with the site\'s Clavister firewall. Bypassed the Starlink router so the dish ran over a direct LAN connection into the firewall\'s LAN2 interface, then reconfigured the firewall so the failover link tunnels back to the Manila site. Mounted the dish on a pole bracket and routed the cable through conduit, then verified the placement with Starlink\'s obstruction check, which showed a clear view and a good experience for streaming, browsing, video calls, and gaming.',
+    images: [
+      { src: '/projects/starlink/aerial-water.webp', alt: 'Aerial view of the Starlink dish on the rooftop parapet beside the water.' },
+      { src: '/projects/starlink/wall-mount.webp', alt: 'Starlink dish on a pole bracket, with the cable routed through conduit down the wall.' },
+      { src: '/projects/starlink/aerial-port.webp', alt: 'Aerial view of the Starlink dish on the parapet, with the port and harbor beyond the roof.' },
+      { src: '/projects/starlink/aerial-roof.webp', alt: 'Aerial view of the Starlink dish on the rooftop beside the waterfront.' },
+      { src: '/projects/starlink/obstruction-check.webp', alt: 'Starlink obstruction check showing a clear view and a good experience for streaming, browsing, video calls, and gaming.' }
+    ]
   }
 ];
