@@ -6,7 +6,6 @@ import { ArrowUpRight, ArrowRight, Download, Mail, MapPin, Terminal, Shield, Net
 import { useState } from 'react';
 import { profile, skills, projects } from './data';
 import './style.css';
-<<<<<<< HEAD
 const reveal={initial:{opacity:0,y:22},whileInView:{opacity:1,y:0},viewport:{once:true,amount:.1},transition:{duration:.55}};
 function Tag({children}){return <span className="tag">{children}</span>}
 function SectionHead({eyebrow,title,description}){return <motion.div {...reveal} className="mb-9"><p className="eyebrow">{eyebrow}</p><h2 className="heading">{title}</h2>{description&&<p className="body-copy mt-3 max-w-2xl">{description}</p>}</motion.div>}
@@ -24,7 +23,6 @@ function App(){return <Layout><React.Suspense fallback={null}><RoutesWrapper/></
 import {Routes,Route} from 'react-router-dom';
 function RoutesWrapper(){return <Routes><Route path="/" element={<Home/>}/><Route path="/projects" element={<Projects/>}/><Route path="/projects/:id" element={<ProjectDetail/>}/><Route path="/experience" element={<Experience/>}/><Route path="/about" element={<About/>}/><Route path="/contact" element={<Contact/>}/><Route path="*" element={<div className="container-wrap page-pad"><h1 className="heading">Page not found</h1><Link to="/" className="text-glow">Return home</Link></div>}/></Routes>}
 createRoot(document.getElementById('root')).render(<BrowserRouter><App/></BrowserRouter>);
-=======
 const reveal = { initial: { opacity: 0, y: 22 }, whileInView: { opacity: 1, y: 0 }, viewport: { once: true, amount: .1 }, transition: { duration: .55 } };
 function Tag({ children }) { return <span className="tag">{children}</span> }
 function SectionHead({ eyebrow, title, description }) { return <motion.div {...reveal} className="mb-9"><p className="eyebrow">{eyebrow}</p><h2 className="heading">{title}</h2>{description && <p className="body-copy mt-3 max-w-2xl">{description}</p>}</motion.div> }
@@ -42,4 +40,3 @@ function App() { return <Layout><React.Suspense fallback={null}><RoutesWrapper /
 import { Routes, Route } from 'react-router-dom';
 function RoutesWrapper() { return <Routes><Route path="/" element={<Home />} /><Route path="/projects" element={<Projects />} /><Route path="/projects/:id" element={<ProjectDetail />} /><Route path="/experience" element={<Experience />} /><Route path="/about" element={<About />} /><Route path="/contact" element={<Contact />} /><Route path="*" element={<div className="container-wrap page-pad"><h1 className="heading">Page not found</h1><Link to="/" className="text-cyan">Return home</Link></div>} /></Routes> }
 createRoot(document.getElementById('root')).render(<BrowserRouter><App /></BrowserRouter>);
->>>>>>> 58e037d274a8edd3f6095244e28ef9eec2fb8a66

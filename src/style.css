@@ -3,7 +3,6 @@
 @tailwind components;
 @tailwind utilities;
 
-<<<<<<< HEAD
 :root { color-scheme: light; }
 html { scroll-behavior: smooth; }
 body {
@@ -117,7 +116,6 @@ button:focus-visible {
 }
 
 .stretched-link:after { content: ""; position: absolute; inset: 0; }
-=======
 :root {
     color-scheme: dark
 }
@@ -207,4 +205,3 @@ body {
     position: absolute;
     inset: 0
 }
->>>>>>> 58e037d274a8edd3f6095244e28ef9eec2fb8a66
