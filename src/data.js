@@ -79,10 +79,10 @@ export const projects = [
   {
     id: 'ap-tapo-cabling',
     type: 'FIELD ENGINEERING',
-    title: 'Access Point, Tapo CCTV & Cable Restructuring',
-    description: 'Installed a TP-Link EAP225-Outdoor access point on the office ceiling to extend wireless coverage, installed two Tapo C110 Wi-Fi cameras, and restructured the cabling in the network corner and wall rack.',
-    stack: ['Wi-Fi', 'Access Point', 'TP-Link EAP', 'Tapo CCTV', 'Structured Cabling'],
-    detail: 'Installed a TP-Link EAP225-Outdoor (AC1200 MU-MIMO Gigabit) access point on the office ceiling to extend wireless coverage. Installed two Tapo C110 Wi-Fi security cameras. Restructured the cabling in the network corner and wall rack, which holds the patch panel, D-Link and Cisco Catalyst switches, and Cisco routers. The routers sit on the shelf above the rack.',
+    title: 'Office Microsite Conversion & AP Installation',
+    description: 'Converted the client\'s office into a microsite. The office no longer has direct network connections to the client\'s sites in Germany and Hong Kong, and users now reach those sites through Citrix. The work included a TP-Link EAP225-Outdoor ceiling access point, two Tapo C110 Wi-Fi cameras, and cable restructuring in the network corner and rack.',
+    stack: ['Microsite', 'Citrix', 'Wi-Fi', 'Access Point', 'Tapo CCTV', 'Structured Cabling'],
+    detail: 'Converted the client\'s office into a microsite. The office no longer has direct network connections to the client\'s sites in Germany and Hong Kong, and users now reach those sites through Citrix. As part of that work, installed a TP-Link EAP225-Outdoor (AC1200 MU-MIMO Gigabit) access point on the office ceiling to extend wireless coverage, installed two Tapo C110 Wi-Fi security cameras, and restructured the cabling in the network corner and wall rack, which holds the patch panel, D-Link and Cisco Catalyst switches, and Cisco routers. The routers sit on the shelf above the rack.',
     images: [
       { src: '/projects/ap/network-corner.webp', alt: 'Network corner with the access point on the ceiling, routers on the shelf, and the wall rack below.' },
       { src: '/projects/ap/ap-ceiling.webp', alt: 'TP-Link EAP225-Outdoor access point mounted on the office ceiling.' },
