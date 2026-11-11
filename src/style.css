@@ -36,8 +36,8 @@ body {
 }
 
 .btn-primary {
-  color: #6A1020;
-  background: linear-gradient(180deg, #FFE9B0 0%, #F0C14D 48%, #D7A43A 100%);
+  color: #1F3D2B;
+  background: linear-gradient(180deg, #E8DCC4 0%, #F0C14D 48%, #D7A43A 100%);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.72), 0 0 18px rgba(240,193,77,.42);
 }
 .btn-primary:hover { background: linear-gradient(180deg, #FFF6D4 0%, #FFE7A8 46%, #F0C14D 100%); }
