@@ -4,7 +4,9 @@ Personal portfolio site for **whitecarjp** (Jp Poticar) — selected projects, w
 
 ## Live site
 
-_Coming soon_ — add your URL here once deployed.
+https://whitecarjp.github.io/portfolio/
+
+Pages source is **GitHub Actions**. Pushes to `main` build and publish that URL.
 
 ## About
 
