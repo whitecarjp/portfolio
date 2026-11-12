@@ -6,7 +6,7 @@ Personal portfolio site for **whitecarjp** (Jp Poticar) — selected projects, w
 
 https://whitecarjp.github.io/portfolio/
 
-After this workflow is on `main`, set **Settings → Pages → Build and deployment → Source** to **GitHub Actions** once. Pushes to `main` then publish that URL.
+Pages source is **GitHub Actions**. Pushes to `main` build and publish that URL.
 
 ## About
 
@@ -14,7 +14,7 @@ This repo holds the source for my portfolio: project case studies, design work, 
 
 ## Stack
 
-Vite, React, React Router, and Tailwind CSS.
+HTML, JSReact
 
 ## Local development
 
