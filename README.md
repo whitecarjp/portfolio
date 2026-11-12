@@ -12,7 +12,7 @@ This repo holds the source for my portfolio: project case studies, design work, 
 
 ## Stack
 
-_To be filled in_ (e.g. Next.js, Astro, plain HTML).
+HTML, JSReact
 
 ## Local development
 
