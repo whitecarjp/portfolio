@@ -1,8 +1,10 @@
+import { publicUrl } from './publicUrl';
+
 export const profile = {
   name: 'Jahna Patricia Poticar', initials: 'JP', location: 'Cebu City, Philippines',
   headline: 'I build, troubleshoot & secure the systems people rely on.',
   intro: 'IT support professional with hands-on experience in systems administration, network infrastructure, and technical operations across local and international environments.',
-  email: 'jahnapatricia@gmail.com', linkedin: 'https://www.linkedin.com/in/whitecarjp/', github: 'https://github.com/whitecarjp', resume: '/Poticar_Resume.pdf'
+  email: 'jahnapatricia@gmail.com', linkedin: 'https://www.linkedin.com/in/whitecarjp/', github: 'https://github.com/whitecarjp', resume: publicUrl('/Poticar_Resume.pdf')
 };
 export const skills = [
   { category: 'Identity & Cloud', items: ['Microsoft 365', 'Entra ID', 'Active Directory', 'Google Workspace', 'MFA & access management'] },
@@ -10,7 +12,7 @@ export const skills = [
   { category: 'Support & Operations', items: ['Freshdesk', 'SyncroMSP', 'Remote troubleshooting', 'Incident triage', 'Knowledge-base documentation'] },
   { category: 'Security & Development', items: ['Huntress', 'Cisco cybersecurity training', 'Python fundamentals', 'JavaScript / React', 'Git & GitHub'] }
 ];
-export const projects = [
+const projectEntries = [
   { 
     id: 'fes-research', 
     type: 'RESEARCH', 
@@ -110,3 +112,12 @@ export const projects = [
     ]
   }
 ];
+
+function withPublicUrls(project) {
+  const next = { ...project };
+  if (next.images) next.images = next.images.map((image) => ({ ...image, src: publicUrl(image.src) }));
+  if (next.videos) next.videos = next.videos.map((video) => ({ ...video, src: publicUrl(video.src) }));
+  return next;
+}
+
+export const projects = projectEntries.map(withPublicUrls);

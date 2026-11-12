@@ -4,7 +4,9 @@ Personal portfolio site for **whitecarjp** (Jp Poticar) — selected projects, w
 
 ## Live site
 
-_Coming soon_ — add your URL here once deployed.
+https://whitecarjp.github.io/portfolio/
+
+After this workflow is on `main`, set **Settings → Pages → Build and deployment → Source** to **GitHub Actions** once. Pushes to `main` then publish that URL.
 
 ## About
 
@@ -12,7 +14,7 @@ This repo holds the source for my portfolio: project case studies, design work, 
 
 ## Stack
 
-_To be filled in_ (e.g. Next.js, Astro, plain HTML).
+Vite, React, React Router, and Tailwind CSS.
 
 ## Local development
 
