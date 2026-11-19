@@ -6,6 +6,20 @@ export const profile = {
   intro: 'IT support professional with hands-on experience in systems administration, network infrastructure, and technical operations across local and international environments.',
   email: 'jahnapatricia@gmail.com', linkedin: 'https://www.linkedin.com/in/whitecarjp/', github: 'https://github.com/whitecarjp', resume: publicUrl('/Poticar_Resume.pdf')
 };
+
+export const about = {
+  eyebrow: 'ABOUT / THE PERSON',
+  title: 'Curiosity, backed by execution.',
+  greeting: "Hi, I'm Jahna.",
+  paragraphs: [
+    "I'm an IT professional who enjoys understanding how systems fit together from a user account and laptop to a firewall, access point, and entire office network.",
+    'My experience includes supporting clients in Cebu and parts of the Visayas, collaborating with international users, and solving problems across cloud productivity, identity, networking, and infrastructure.',
+    "I'm expanding my cybersecurity knowledge through Cisco Networking Academy, building on my systems and networking foundation.",
+  ],
+  tags: ['Computer Engineering', 'Systems Administration', 'IT Operations', 'Networking', 'Cybersecurity'],
+  portrait: '/JP_Jarvis.png',
+  portraitAlt: 'Portrait of Jahna Patricia Poticar',
+};
 export const skills = [
   { category: 'Identity & Cloud', items: ['Microsoft 365', 'Entra ID', 'Active Directory', 'Google Workspace', 'MFA & access management'] },
   { category: 'Networks & Infrastructure', items: ['TCP/IP · DNS · DHCP', 'VPN & firewalls', 'Wireless access points', 'Synology NAS', 'Internet failover'] },
