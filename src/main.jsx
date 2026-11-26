@@ -14,45 +14,60 @@ function Nav() { const [open, setOpen] = useState(false); const links = [['/', '
 function Footer() { return <footer className="border-t border-cream/60 mt-24"><div className="container-wrap py-8 flex flex-col sm:flex-row gap-3 justify-between text-sm text-muted"><span>© {new Date().getFullYear()} {profile.name}</span><span>Designed for curiosity. Built with React.</span></div></footer> }
 function Layout({ children }) { return <div className="min-h-screen flex flex-col"><Nav /><main className="flex-1">{children}</main><Footer /></div> }
 function ProjectCard({ project, index }) { const cover = project.images?.[0]; return <motion.article {...reveal} transition={{ duration: .5, delay: index * .06 }} className="project-card group"><div className="flex items-center justify-between mb-8"><span className="eyebrow !mb-0">{project.type}</span><ArrowUpRight className="text-muted group-hover:text-cream transition-colors" size={20} /></div>{cover && <img className="project-cover" src={cover.src} alt={cover.alt} loading="lazy" />}<h3 className="text-xl sm:text-2xl font-semibold mb-3 group-hover:text-cream transition-colors">{project.title}</h3><p className="body-copy mb-6">{project.description}</p><div className="flex flex-wrap gap-2 mb-7">{project.stack.map(t => <Tag key={t}>{t}</Tag>)}</div><Link className="stretched-link text-sm font-semibold text-cream inline-flex gap-2 items-center" to={`/projects/${project.id}`}>View case study <ArrowRight size={15} /></Link></motion.article> }
-function Home() { return <><section className="container-wrap pt-20 md:pt-28 pb-24 relative"><div className="hero-glow" aria-hidden="true"><div className="hud-core" /></div><motion.div initial={{ opacity: 0, y: 25 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .7 }} className="relative z-10 max-w-5xl"><div className="mb-8"><div className="flex flex-wrap gap-2 mb-4" aria-hidden="true">{['SYSTEMS', 'NETWORK', 'IDENTITY', 'PERIMETER'].map(label => <span key={label} className="hud-pill"><span className="hud-dot" />{label}</span>)}</div><div className="flex items-center gap-2"><span className="hud-dot" /><span className="eyebrow !mb-0">IT SUPPORT / SYSTEMS / NETWORK ENGINEERING</span></div></div><h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1.06] mb-8">Making complex<br /><span className="gradient-text">systems work.</span></h1><p className="body-copy max-w-2xl text-lg">{profile.intro}</p><div className="flex flex-wrap gap-3 mt-9"><Link className="btn-primary" to="/projects">Explore projects <ArrowUpRight size={17} /></Link><Link className="btn-secondary" to="/contact">Get in touch <ArrowRight size={17} /></Link></div><div className="mt-14 flex flex-wrap gap-6 text-sm text-muted"><span className="flex items-center gap-2"><MapPin size={15} className="text-cream" />{profile.location}</span><span className="flex items-center gap-2"><Terminal size={15} className="text-cream" />Engineering mindset. Human-first support.</span></div></motion.div></section><FeaturedAbout /><section className="container-wrap py-16"><SectionHead eyebrow="02 / SELECTED WORK" title="Built in the real world." description="A mix of field deployments, IT operations, and engineering research. Sensitive client details are intentionally excluded." /><div className="grid md:grid-cols-2 gap-5">{projects.slice(0, 4).map((p, i) => <ProjectCard key={p.id} project={p} index={i} />)}</div><Link to="/projects" className="inline-flex items-center gap-2 text-cream font-semibold mt-8">All projects <ArrowRight size={18} /></Link></section><section className="container-wrap py-20"><SectionHead eyebrow="03 / CAPABILITIES" title="From endpoints to infrastructure." /><div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">{skills.map((s, i) => <motion.div {...reveal} key={s.category} className="glass-card"><div className="mb-5 text-cream">{[<Network />, <Terminal />, <Shield />, <Code2 />][i]}</div><h3 className="font-semibold text-lg mb-4">{s.category}</h3><ul className="space-y-2 text-sm text-muted">{s.items.map(item => <li key={item}>{item}</li>)}</ul></motion.div>)}</div></section><section className="container-wrap py-16"><div className="cta"><p className="eyebrow">04 / WHAT'S NEXT</p><h2 className="heading max-w-xl">Let's build something reliable.</h2><p className="body-copy mt-4 mb-7">Interested in IT infrastructure, technical support, systems engineering, or cybersecurity? Let's connect.</p><Link className="btn-primary" to="/contact">Contact me <ArrowUpRight size={17} /></Link></div></section></> }
+function Home() {
+  return (
+    <>
+      <section className="container-wrap relative pt-20 pb-24 md:pt-28">
+        <div className="hero-glow" aria-hidden="true"><div className="hud-core" /></div>
+        <motion.div initial={{ opacity: 0, y: 25 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: .7 }} className="relative z-10">
+          <div className="mb-8">
+            <div className="mb-4 flex flex-wrap gap-2" aria-hidden="true">{['SYSTEMS', 'NETWORK', 'IDENTITY', 'PERIMETER'].map(label => <span key={label} className="hud-pill"><span className="hud-dot" />{label}</span>)}</div>
+            <div className="flex items-center gap-2"><span className="hud-dot" /><span className="eyebrow !mb-0">IT SUPPORT / SYSTEMS / NETWORK ENGINEERING</span></div>
+          </div>
+          <div className="grid items-center gap-8 lg:grid-cols-[minmax(0,0.78fr)_minmax(0,1.22fr)] lg:gap-14">
+            <img className="hero-portrait" src={publicUrl(about.portrait)} alt={about.portraitAlt} />
+            <div>
+              <h1 className="mb-6 max-w-3xl text-4xl font-bold leading-[1.08] tracking-tight sm:text-5xl md:text-6xl"><span className="gradient-text">{about.title}</span></h1>
+              <h2 className="mb-5 text-2xl font-semibold">{about.greeting}</h2>
+              {about.paragraphs.map((paragraph, index) => (
+                <p key={paragraph} className={`body-copy max-w-2xl text-lg ${index === about.paragraphs.length - 1 ? 'mb-8' : 'mb-5'}`}>{paragraph}</p>
+              ))}
+              <div className="flex flex-wrap gap-2">{about.tags.map((tag) => <Tag key={tag}>{tag}</Tag>)}</div>
+            </div>
+          </div>
+          <div className="mt-9 flex flex-wrap gap-3">
+            <Link className="btn-primary" to="/projects">Explore projects <ArrowUpRight size={17} /></Link>
+            <Link className="btn-secondary" to="/contact">Get in touch <ArrowRight size={17} /></Link>
+          </div>
+          <div className="mt-14 flex flex-wrap gap-6 text-sm text-muted">
+            <span className="flex items-center gap-2"><MapPin size={15} className="text-cream" />{profile.location}</span>
+            <span className="flex items-center gap-2"><Terminal size={15} className="text-cream" />Engineering mindset. Human-first support.</span>
+          </div>
+        </motion.div>
+      </section>
+      <section className="container-wrap py-16"><SectionHead eyebrow="01 / SELECTED WORK" title="Built in the real world." description="A mix of field deployments, IT operations, and engineering research. Sensitive client details are intentionally excluded." /><div className="grid md:grid-cols-2 gap-5">{projects.slice(0, 4).map((p, i) => <ProjectCard key={p.id} project={p} index={i} />)}</div><Link to="/projects" className="inline-flex items-center gap-2 text-cream font-semibold mt-8">All projects <ArrowRight size={18} /></Link></section>
+      <section className="container-wrap py-20"><SectionHead eyebrow="02 / CAPABILITIES" title="From endpoints to infrastructure." /><div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">{skills.map((s, i) => <motion.div {...reveal} key={s.category} className="glass-card"><div className="mb-5 text-cream">{[<Network />, <Terminal />, <Shield />, <Code2 />][i]}</div><h3 className="font-semibold text-lg mb-4">{s.category}</h3><ul className="space-y-2 text-sm text-muted">{s.items.map(item => <li key={item}>{item}</li>)}</ul></motion.div>)}</div></section>
+      <section className="container-wrap py-16"><div className="cta"><p className="eyebrow">03 / WHAT'S NEXT</p><h2 className="heading max-w-xl">Let's build something reliable.</h2><p className="body-copy mt-4 mb-7">Interested in IT infrastructure, technical support, systems engineering, or cybersecurity? Let's connect.</p><Link className="btn-primary" to="/contact">Contact me <ArrowUpRight size={17} /></Link></div></section>
+    </>
+  );
+}
 function Projects() { return <div className="container-wrap page-pad"><SectionHead eyebrow="WORK / CASE STUDIES" title="Projects & technical work." description="Real-world technical experience and academic research. These summaries are representative and avoid confidential configurations." /><div className="grid md:grid-cols-2 gap-5">{projects.map((p, i) => <ProjectCard key={p.id} project={p} index={i} />)}</div></div> }
 function ProjectDetail() { const { id } = useParams(); const p = projects.find(x => x.id === id); if (!p) return <div className="container-wrap page-pad"><h1 className="heading">Project not found.</h1><Link to="/projects" className="text-cream">Back to projects</Link></div>; return <div className="container-wrap page-pad max-w-4xl"><Link to="/projects" className="text-cream text-sm">← All projects</Link><p className="eyebrow mt-12">{p.type} / CASE STUDY</p><h1 className="heading !text-5xl mb-6">{p.title}</h1><p className="body-copy text-lg mb-10">{p.description}</p><div className="glass-card mb-8"><h2 className="text-xl font-semibold mb-4">Overview</h2><p className="body-copy">{p.detail}</p></div><div className="flex gap-2 flex-wrap">{p.stack.map(t => <Tag key={t}>{t}</Tag>)}</div>{p.images?.length ? <div className="project-gallery">{p.images.map(image => <img key={image.src} src={image.src} alt={image.alt} loading="lazy" />)}</div> : null}{p.videos?.length ? <div className="project-videos">{p.videos.map(video => <figure key={video.src} className="glass-card"><video className="project-video" src={video.src} controls playsInline preload="metadata" /><figcaption className="mt-4"><p className="font-semibold mb-2">{video.title}</p><p className="body-copy">{video.description}</p></figcaption></figure>)}</div> : null}{!p.images?.length && !p.videos?.length ? <p className="text-muted text-sm mt-12">Add approved project images, outcomes, diagrams, and measurements here as your case study grows.</p> : null}</div> }
 function Experience() { return <div className="container-wrap page-pad"><SectionHead eyebrow="BACKGROUND / EXPERIENCE" title="Hands-on, across environments." description="My work has combined remote troubleshooting, field engineering, identity administration, and support for multi-client operations." /><div className="max-w-4xl space-y-5"><div className="glass-card"><p className="eyebrow">PROFESSIONAL EXPERIENCE</p><h2 className="text-2xl font-semibold mb-2">IT Support & Systems Administration</h2><p className="body-copy mb-5">Multi-client environments · Philippines and international users</p><ul className="space-y-3 text-muted list-disc pl-5"><li>Supported Microsoft 365, Google Workspace, Active Directory, and end-user endpoints.</li><li>Performed network troubleshooting, firewall/VPN support, hardware deployments, and on-site field work.</li><li>Managed and documented incidents using Freshdesk; maintained approximately 90% SLA performance.</li><li>Provided remote troubleshooting with SyncroMSP and coordinated technical tasks across locations.</li></ul></div><div className="glass-card"><p className="eyebrow">EDUCATION / RESEARCH</p><h2 className="text-2xl font-semibold mb-2">BS Computer Engineering</h2><p className="body-copy">University of San Carlos · Cebu City</p><p className="body-copy mt-4">Research on functional electrical stimulation for finger-flexion assistance; experience with embedded systems, programming, and engineering projects.</p></div><div className="glass-card"><p className="eyebrow">LEARNING</p><h2 className="text-2xl font-semibold mb-2">Cybersecurity & Networking</h2><p className="body-copy">Currently pursuing Cisco Junior Cybersecurity Analyst training through Networking Academy. Completed Cisco Networking Basics and introductory cybersecurity training, alongside TESDA computer systems and networking coursework.</p></div></div></div> }
-function AboutProfile({ featured = false }) {
-  const paragraphs = featured ? about.paragraphs.slice(0, 2) : about.paragraphs;
-  const Greeting = featured ? 'h3' : 'h2';
+function AboutProfile() {
   return (
-    <div className={featured ? 'grid items-center gap-8 lg:grid-cols-[minmax(0,0.86fr)_minmax(0,1.14fr)] lg:gap-12' : 'grid items-start gap-8 lg:grid-cols-[1fr_1.4fr]'}>
+    <div className="grid items-start gap-8 lg:grid-cols-[1fr_1.4fr]">
       <div className="portrait-box">
-        <img className={featured ? 'portrait-photo featured-portrait' : 'portrait-photo'} src={publicUrl(about.portrait)} alt={about.portraitAlt} />
+        <img className="portrait-photo" src={publicUrl(about.portrait)} alt={about.portraitAlt} />
       </div>
       <div>
-        <Greeting className="mb-5 text-2xl font-semibold">{about.greeting}</Greeting>
-        {paragraphs.map((paragraph, index) => (
-          <p key={paragraph} className={`body-copy ${index === paragraphs.length - 1 ? 'mb-8' : 'mb-5'}`}>{paragraph}</p>
+        <h2 className="mb-5 text-2xl font-semibold">{about.greeting}</h2>
+        {about.paragraphs.map((paragraph, index) => (
+          <p key={paragraph} className={`body-copy ${index === about.paragraphs.length - 1 ? 'mb-8' : 'mb-5'}`}>{paragraph}</p>
         ))}
         <div className="flex flex-wrap gap-2">{about.tags.map((tag) => <Tag key={tag}>{tag}</Tag>)}</div>
-        {featured && (
-          <Link className="btn-secondary mt-8" to="/about" aria-label="Read the full About page">
-            Read more <ArrowRight size={17} aria-hidden="true" />
-          </Link>
-        )}
       </div>
     </div>
-  );
-}
-function FeaturedAbout() {
-  return (
-    <section className="container-wrap pb-8 md:pb-14" aria-labelledby="featured-about-title">
-      <motion.div {...reveal} className="featured-about">
-        <div className="mb-6 flex items-center gap-2 sm:mb-8">
-          <span className="hud-dot" aria-hidden="true" />
-          <p className="eyebrow !mb-0">01 / ABOUT</p>
-        </div>
-        <h2 id="featured-about-title" className="heading mb-8 max-w-3xl">{about.title}</h2>
-        <AboutProfile featured />
-      </motion.div>
-    </section>
   );
 }
 function About() {
